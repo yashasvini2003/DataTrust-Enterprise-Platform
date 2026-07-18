@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {"rule_id": "DQ-CUS-001", "name": "Customer ID must be present", "dimension": "Completeness", "field": "customer_id", "type": "required", "severity": "Critical"},
+    {"rule_id": "DQ-CUS-002", "name": "Customer ID must be unique", "dimension": "Uniqueness", "field": "customer_id", "type": "unique", "severity": "Critical"},
+    {"rule_id": "DQ-CUS-004", "name": "Email must match the approved pattern", "dimension": "Validity", "field": "email", "type": "regex", "pattern": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$", "severity": "High"},
+    {"rule_id": "DQ-CUS-006", "name": "Date of birth must be supplied", "dimension": "Completeness", "field": "birth_date", "type": "required", "severity": "High"},
+    {"rule_id": "DQ-RSK-002", "name": "Credit score must be between 300 and 900", "dimension": "Accuracy", "field": "credit_score", "type": "range", "minimum": 300, "maximum": 900, "severity": "High"},
+    {"rule_id": "DQ-CUS-009", "name": "Province must use a Canadian code", "dimension": "Conformity", "field": "province", "type": "reference", "allowed_values": ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"], "severity": "Medium"}
+  ]
+}

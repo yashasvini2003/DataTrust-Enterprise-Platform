@@ -1,0 +1,16 @@
+{
+  "asset": "customer_master",
+  "domain": "Customer",
+  "business_owner": "Customer Data Office",
+  "data_steward": "Customer Data Stewardship Team",
+  "classification": "Restricted",
+  "retention": "Seven years after account closure",
+  "fields": [
+    {"name": "customer_key", "business_name": "Customer Identifier", "definition": "Stable identifier assigned to one customer record.", "data_type": "VARCHAR(36)", "nullable": false, "is_pii": true, "allowed_values": "CUS- followed by four digits", "quality_rule": "DQ-CUS-001"},
+    {"name": "customer_name", "business_name": "Customer Full Name", "definition": "Customer legal name supplied by the source CRM.", "data_type": "VARCHAR(120)", "nullable": false, "is_pii": true, "allowed_values": "Printable UTF-8 text", "quality_rule": "DQ-CUS-002"},
+    {"name": "email", "business_name": "Email Address", "definition": "Primary electronic contact address.", "data_type": "VARCHAR(254)", "nullable": true, "is_pii": true, "allowed_values": "Approved email pattern", "quality_rule": "DQ-CUS-004"},
+    {"name": "date_of_birth", "business_name": "Date of Birth", "definition": "Customer birth date represented using ISO 8601.", "data_type": "DATE", "nullable": true, "is_pii": true, "allowed_values": "YYYY-MM-DD", "quality_rule": "DQ-CUS-006"},
+    {"name": "credit_score", "business_name": "Credit Score", "definition": "Most recent bureau-derived risk score.", "data_type": "SMALLINT", "nullable": true, "is_pii": true, "allowed_values": "300–900", "quality_rule": "DQ-RSK-002"},
+    {"name": "province", "business_name": "Province or Territory", "definition": "Canadian province or territory associated with the customer address.", "data_type": "CHAR(2)", "nullable": false, "is_pii": true, "allowed_values": "Official Canadian two-letter codes", "quality_rule": "DQ-CUS-009"}
+  ]
+}

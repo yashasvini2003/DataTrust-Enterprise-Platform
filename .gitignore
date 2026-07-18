@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.next/
+.sites-runtime/
+.wrangler/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+backend/runtime/*.db
+backend/runtime/*.json
+!backend/runtime/.gitkeep
+.env
+.env.*
+!.env.example

@@ -1,0 +1,9 @@
+{
+  "terms": [
+    {"term": "Customer", "definition": "An individual or organization with an established relationship to the institution.", "owner": "Customer Data Office", "status": "Approved"},
+    {"term": "Active Account", "definition": "An account that is open and permitted to transact as of the reporting date.", "owner": "Core Banking", "status": "Approved"},
+    {"term": "Data Quality Issue", "definition": "A measured failure of an approved data-quality rule requiring assessment or remediation.", "owner": "Enterprise Data Governance", "status": "Approved"},
+    {"term": "Trust Score", "definition": "Weighted aggregate of rule pass rates for one governed asset or domain.", "owner": "Enterprise Data Governance", "status": "Approved"},
+    {"term": "Risk Rating", "definition": "Classification of exposure based on the approved risk model and most recent source data.", "owner": "Risk Data Office", "status": "In Review"}
+  ]
+}

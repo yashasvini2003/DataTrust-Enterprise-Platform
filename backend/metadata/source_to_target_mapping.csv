@@ -1,0 +1,7 @@
+mapping_id,source_system,source_asset,source_field,source_type,transformation_logic,target_system,target_asset,target_field,target_type,validation_rule,version,approval_status
+MAP-001,Customer CRM,customers.csv,customer_id,STRING,trim then uppercase,Customer 360,customer_master,customer_key,VARCHAR(36),DQ-CUS-001,2.3,Approved
+MAP-002,Customer CRM,customers.csv,full_name,STRING,normalize whitespace,Customer 360,customer_master,customer_name,VARCHAR(120),DQ-CUS-002,2.3,Approved
+MAP-003,Customer CRM,customers.csv,email,STRING,lowercase then validate regex,Customer 360,customer_master,email,VARCHAR(254),DQ-CUS-004,2.3,Approved
+MAP-004,Customer CRM,customers.csv,birth_date,STRING,convert to ISO-8601,Customer 360,customer_master,date_of_birth,DATE,DQ-CUS-006,2.3,Approved
+MAP-005,Risk Bureau,risk_scores.csv,credit_score,INTEGER,validate approved range,Risk Warehouse,risk_profile,credit_score,SMALLINT,DQ-RSK-002,2.3,Approved
+MAP-006,Customer CRM,customers.csv,province,STRING,lookup Canadian reference codes,Customer 360,customer_master,province,CHAR(2),DQ-CUS-009,2.3,Approved

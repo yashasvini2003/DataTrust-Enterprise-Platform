@@ -1,0 +1,13 @@
+customer_id,full_name,email,birth_date,credit_score,province,account_status
+CUS-1001,Ava Thompson,ava.thompson@example.ca,1993-04-15,742,ON,Active
+CUS-1002,Noah Wilson,noah.wilson@example.ca,1988-09-23,681,BC,Active
+CUS-1003,Mia Chen,mia.chen@example.ca,1997-11-02,805,ON,Active
+CUS-1004,Liam Patel,liam.patel@example.ca,,719,AB,Active
+CUS-1005,Sophia Martin,sophia.martin.example.ca,1991-06-30,664,QC,Active
+CUS-1006,Ethan Brown,ethan.brown@example.ca,1984-03-12,921,ON,Review
+CUS-1007,Isabella Singh,isabella.singh@example.ca,1999-08-21,770,MB,Active
+CUS-1008,Lucas Roy,lucas.roy@example.ca,1978-12-08,590,NB,Dormant
+CUS-1009,Amelia Scott,amelia.scott@example.ca,1995-05-17,733,ZZ,Active
+CUS-1010,Oliver King,oliver.king@example.ca,1986-07-27,698,NS,Active
+CUS-1010,Olivia Young,olivia.young@example.ca,1992-10-10,715,ON,Active
+,James Lee,james.lee@example.ca,1990-01-19,704,ON,Active

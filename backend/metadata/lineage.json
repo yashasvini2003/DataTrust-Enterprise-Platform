@@ -1,0 +1,19 @@
+{
+  "lineage_name": "Customer risk reporting flow",
+  "version": "2.3",
+  "nodes": [
+    {"id": "customers_csv", "name": "customers.csv", "type": "source_file", "system": "Customer CRM"},
+    {"id": "dq_validation", "name": "Data-quality validation", "type": "quality_gate", "system": "DataTrust"},
+    {"id": "customer_clean", "name": "customer_clean", "type": "standardized_dataset", "system": "Python pipeline"},
+    {"id": "risk_profile", "name": "risk_profile", "type": "integrated_dataset", "system": "SQL transformation"},
+    {"id": "risk_warehouse", "name": "risk_warehouse", "type": "warehouse_table", "system": "Analytical warehouse"},
+    {"id": "regulatory_summary", "name": "regulatory_summary", "type": "reporting_view", "system": "Governance reporting"}
+  ],
+  "edges": [
+    {"source": "customers_csv", "target": "dq_validation", "process": "ingest_and_profile"},
+    {"source": "dq_validation", "target": "customer_clean", "process": "validate_and_standardize"},
+    {"source": "customer_clean", "target": "risk_profile", "process": "join_customer_risk"},
+    {"source": "risk_profile", "target": "risk_warehouse", "process": "warehouse_load"},
+    {"source": "risk_warehouse", "target": "regulatory_summary", "process": "aggregate_controls"}
+  ]
+}
